@@ -1,0 +1,6 @@
+div.fixed {
+    position: fixed;
+    top: 60px;
+    right:800px;
+    width: 300px;
+  }
