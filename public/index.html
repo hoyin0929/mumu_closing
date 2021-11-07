@@ -8,23 +8,22 @@
   <link rel="stylesheet" type="text/css" href= "main.css">
 </head>
 <body>
+    <!--<img src="image/mumu.jfif" width="100" height="100" alt="mumu"> -->
     <h1>Foster MUMU <span id='date'></span></h1>
-
+    <div class="row">
+        <div class="column">
+    
     <p id="msg">A.M.:</p>
-    <ul>
-      <li class="list">Credit:<input type="number" id="amCredit" value="0"></li>  
-      <li class="list">Cash:  <input type="number" id="amCash" value="0"></li>
-      <li>Total: <output id="amTotal"></output></li>
-      <button onclick="calculate()">Calculate</button>
-    </ul>
-
-    Total A.M. Kitchen Tips: <output id="am_kitchen_tips"></output></br>
-    Total A.M. Server Tips: <output id="am_remaining"></output></br>
-
+    Credit:<input type="number" id="amCredit" value="0" style="width: 64px;"> </br>
+    Cash:   <input type="number" id="amCash" value="0" style="width: 65px;"></br>
+    Total: <output id="amTotal"></output></br>
+    <button onclick="calculate()">Calculate</button></br></br>
+    
+    Kitchen Tips: <output id="am_kitchen_tips"></output></br>
+    Server Tips: <output id="am_remaining"></output></br>
+    
     <h3>Employees of A.M.</h3>
-  
-    <form>
-        
+    <form>  
         <input type="checkbox" name="am" value="1">Tevis: <output id = "tevis_am"></output></br>             
         <input type="checkbox" name="am" value="1">DT: <output id = "dt_am"></output>  </br>
         <input type="checkbox" name="am" value="1">Mason: <output id = "mason_am"></output></br>
@@ -38,21 +37,18 @@
         <input type="checkbox" name="am" value="0">Kang: <output id ="am_kang"></output></br>
         <input type="checkbox" name="am" value="0">Chen: <output id ="am_chen"></output></br>
         <input type="checkbox" name="am" value="0">Elias: <output id ="am_elias"></output></br>
-
     </form>
+    </div>
 
-    <div class = fixed>
-
+    <div class="column">
     <p id="msg">P.M.:</p>
-    <ul>
-        <li class="list">Credit:<input type="number" id="pmCredit" value="0"></li>  
-        <li class="list">Cash:  <input type="number" id="pmCash" value="0"></li>
-        <li>Total: <output id="pmTotal"></output></li>
-        <button onclick="myFunction()">Calculate</button>
-    </ul>
+        Credit:<input type="number" id="pmCredit" value="0" style="width: 64px;"> </br>
+        Cash:  <input type="number" id="pmCash" value="0" style="width: 65px;"></br>
+        Total: <output id="pmTotal"></output></br>
+        <button onclick="myFunction()">Calculate</button></br></br>
     
-    Total P.M. Kitchen Tips: <output id="pm_kitchen_tips"></output></br>
-    Total P.M. Server Tips: <output id="pm_remaining"></output></br>
+    Kitchen Tips: <output id="pm_kitchen_tips"></output></br>
+    Server Tips: <output id="pm_remaining"></output></br>
 
     <h3>Employees of P.M.</h3> 
 
@@ -73,7 +69,8 @@
         <input type="checkbox" name="choice" value="0">Elias: <output id ="pm_elias"></output></br>
 
     </form>
-    </div>
+    </div></div>
+    
 
     <script src="script.js"></script>
 

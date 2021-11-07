@@ -1,6 +1,11 @@
-div.fixed {
-    position: fixed;
-    top: 60px;
-    right:800px;
-    width: 300px;
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
   }
