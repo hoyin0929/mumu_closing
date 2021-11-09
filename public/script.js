@@ -104,9 +104,9 @@ function calculate(){
     
 
     if (am[8].checked){
-        if (count >> 1){
+        //if (count >> 1){
             jay = Math.round(Number(am_remaining) / Number(totalPer) * Number(0.75));
-        }else andrew = am_remaining.toFixed(2);
+        //}else andrew = am_remaining.toFixed(2);
     }
 
     if (am[10].checked){
