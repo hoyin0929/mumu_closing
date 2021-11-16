@@ -20,6 +20,7 @@ function calculate(){
     var kang = 0;
     var chen = 0;
     var elias = 0;
+    var dago = 0;
 
     var count = 0;
     
@@ -59,8 +60,11 @@ function calculate(){
     if (am[22].checked)
         elias = float2int(am_kit_tips);
 
-        document.getElementById("am_kitchen_tips").innerHTML = bao+jacky+chen+kang+wang+elias;
-        var am_remaining = Number(amTotal) - (bao+jacky+chen+kang+wang+elias);
+    if (am[24].checked)
+        dago = float2int(am_kit_tips);
+
+        document.getElementById("am_kitchen_tips").innerHTML = bao+jacky+chen+kang+wang+elias+dago;
+        var am_remaining = Number(amTotal) - (bao+jacky+chen+kang+wang+elias+dago);
     document.getElementById("am_remaining").innerHTML = am_remaining.toFixed(2);
     
 
@@ -70,6 +74,7 @@ function calculate(){
     document.getElementById("am_kang").innerHTML = kang;
     document.getElementById("am_elias").innerHTML = elias;
     document.getElementById("am_chen").innerHTML = chen;
+    document.getElementById("am_dago").innerHTML = dago;
 
     var tevis= 0;
     var dt= 0;
@@ -104,9 +109,9 @@ function calculate(){
     
 
     if (am[8].checked){
-        //if (count >> 1){
+        if (count >> 1){
             jay = Math.round(Number(am_remaining) / Number(totalPer) * Number(0.75));
-        //}else andrew = am_remaining.toFixed(2);
+        }else jay= am_remaining.toFixed(2);
     }
 
     if (am[10].checked){
@@ -127,12 +132,17 @@ function calculate(){
         if (am[8].checked)
            jay = smallest.toFixed(2);
     }
+    else if (dt == Math.min.apply(null, array.filter(Boolean))){
+        if (am[2].checked)
+           dt = smallest.toFixed(2);
+    }
     else if (andrew = Math.min.apply(null, array.filter(Boolean))){
         if (am[6].checked)
         andrew = smallest.toFixed(2);
         else
         andrew = 0; 
     }
+    
 
 
     if ((am[2].checked) && (totalPer == 2) &&(am[0].checked)){
@@ -189,6 +199,7 @@ function myFunction() {
     var pm_kang = 0;
     var pm_chen = 0;
     var pm_elias = 0;
+    var pm_dago = 0;
     
     for(i=0;i<choice.length; i++){
         if ((choice[i].checked) && (choice[i].value != 0) && (choice[i].value != 2)){
@@ -219,9 +230,12 @@ function myFunction() {
 
     if (choice[11].checked)
         pm_elias = float2int(pm_kit_tips);
+
+    if (choice[12].checked)
+        pm_dago = float2int(pm_kit_tips);
     
-    document.getElementById("pm_kitchen_tips").innerHTML = pm_bao + pm_jacky + pm_chen + pm_kang + pm_wang + pm_elias;
-    var pm_remaining = Number(pmTotal) - (pm_bao + pm_jacky + pm_chen + pm_kang + pm_wang + pm_elias);
+    document.getElementById("pm_kitchen_tips").innerHTML = pm_bao + pm_jacky + pm_chen + pm_kang + pm_wang + pm_elias + pm_dago;
+    var pm_remaining = Number(pmTotal) - (pm_bao + pm_jacky + pm_chen + pm_kang + pm_wang + pm_elias + pm_dago);
     document.getElementById("pm_remaining").innerHTML = pm_remaining.toFixed(2);
     
 
@@ -232,6 +246,7 @@ function myFunction() {
     document.getElementById("pm_kang").innerHTML = pm_kang;
     document.getElementById("pm_elias").innerHTML = pm_elias;
     document.getElementById("pm_chen").innerHTML = pm_chen;
+    document.getElementById("pm_dago").innerHTML = pm_dago;
 
     var pm_tevis= 0;
     var pm_dt= 0;
