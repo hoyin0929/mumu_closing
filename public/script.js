@@ -116,7 +116,7 @@ function calculate(){
 
     if (am[10].checked){
         if (count >> 1){
-        max = Math.round(Number(am_remaining) / Number(totalPer)) * Number(0.5);
+        max = Math.round(Number(am_remaining) / Number(totalPer)) * Number(0.55);
         }else max = am_remaining.toFixed(2);
     }
 
@@ -271,7 +271,7 @@ function myFunction() {
         pm_jay = Math.round(Number(pm_remaining) / Number(pm_totalPer) * Number(0.75));
 
     if (choice[5].checked)
-        pm_max = Math.round(Number(pm_remaining) / Number(pm_totalPer)) * Number(0.5);
+        pm_max = Math.round(Number(pm_remaining) / Number(pm_totalPer)) * Number(0.55);
 
     var arr = [pm_tevis,pm_dt,pm_mason,pm_andrew,pm_jay,pm_max];
     var pm_smallest = Math.min.apply(null, arr.filter(Boolean));
